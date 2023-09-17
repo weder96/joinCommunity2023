@@ -16,6 +16,8 @@ cdk init app --language java
 
 ### Resources
 
+https://github.com/aws/aws-cdk
+
 https://github.com/aws-samples/aws-cdk-examples/tree/v2
 
 https://hands-on.cloud/cdk-python-lambda-example/
