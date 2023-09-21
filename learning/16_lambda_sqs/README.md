@@ -179,6 +179,7 @@ aws sqs receive-message  --queue-url  https://sqs.us-east-1.amazonaws.com/710304
 ### send from other terminal:
 ```
 aws sqs send-message --queue-url https://eu-west-1.queue.amazonaws.com/069157535684/dev1-tom-test1 --message-body "Test message from other window"
+aws sqs send-message --queue-url https://sqs.us-east-1.amazonaws.com/710304818543/MyStack-myQueue4FDFF71C-P2PDSyRIxttm --message-body "Test message from other window"
 ```
 
 -------------------------------------------------------------------------------------------------------------------------------

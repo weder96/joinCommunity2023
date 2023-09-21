@@ -41,6 +41,13 @@ aws sns subscribe --topic-arn arn:aws:sns:us-east-1:710304818543:my-topic --prot
 
 ```
 aws sns publish --topic-arn arn:aws:sns:us-east-1:710304818543:my-topic --message "Hello World!"
+
+aws sns publish --topic-arn arn:aws:sns:us-east-1:710304818543:MyStack-mytopic2B0AD69A3-GkpvSFy2In50 --message "Hello World!"
+
+aws sns publish --topic-arn arn:aws:sns:us-east-1:710304818543:MyStack-mytopic2B0AD69A3-DeewkGb6bv6j --message "Hello World !!!"
+
+{"message": "teste sns to sqs to lambda"}
+
 ```
 
 ### Unsubscribe from a topic
