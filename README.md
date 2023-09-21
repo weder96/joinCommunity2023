@@ -22,4 +22,4 @@
 
 ### Presentation PDF
 
-![Presentation PDF +150](https://github.com/weder96/joinCommunity2023/blob/main/presentation_join_community_2023.pdf)
+[Presentation PDF +150](https://github.com/weder96/joinCommunity2023/blob/main/presentation_join_community_2023.pdf)
