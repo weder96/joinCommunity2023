@@ -24,7 +24,7 @@ aws iam create-role --role-name apigw-lambda-role-py --assume-role-policy-docume
 
 ### We use the attach-role-policy command :
 
-# attach the `AWSLambdaBasicExecutionRole` policy to the lambda role
+### attach the `AWSLambdaBasicExecutionRole` policy to the lambda role
 ### attach-role AWSLambdaBasicExecutionRole managed policy:
 
 ```
@@ -63,7 +63,7 @@ aws lambda create-function \
     --handler app.lambda_handler \
     --role arn:aws:iam::710304818543:role/apigw-lambda-role-py
 ```
-
+---------------------------------------------------------------------------------------------------------
 
 ### Create the API Gateway
 **To create an API Gateway and connect it whith the Lambda we need to :**
@@ -87,12 +87,15 @@ aws apigateway create-rest-api \
     --endpoint-configuration '{ "types": ["REGIONAL"] }'
 ```
 
+![API](https://github.com/weder96/joinCommunity2023/blob/main/learning/10_ApiGateway/assets/api.png)
+
+---------------------------------------------------------------------------------------------------------
 
 ### Create the resource
 
 We use the [create-resource](https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-resource.html) command :
 
-# create the `API_GATEWAY_RESOURCE_NAME` resource path
+### create the `API_GATEWAY_RESOURCE_NAME` resource path
 
 ```
 aws apigateway create-resource \
@@ -110,6 +113,10 @@ aws apigateway create-resource \
     --path-part 'items'
 ```
 
+![Resources](https://github.com/weder96/joinCommunity2023/blob/main/learning/10_ApiGateway/assets/resources.png)
+
+
+---------------------------------------------------------------------------------------------------------
 
 ### Create the POST method
 
@@ -135,7 +142,11 @@ aws apigateway put-method \
     --authorization-type NONE
 ```
 
-## setup the POST method integration request
+
+
+---------------------------------------------------------------------------------------------------------
+
+### setup the POST method integration request
 
 ```
  aws apigateway put-integration \
@@ -148,7 +159,7 @@ aws apigateway put-method \
     --uri "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:710304818543:function:apiGwLambda/invocations"
 ```
 
-# add lambda permission
+### add lambda permission
 ```
 aws lambda add-permission \
     --region $AWS_REGION \
@@ -169,13 +180,13 @@ aws lambda add-permission \
     --source-arn "arn:aws:execute-api:us-east-1:710304818543:t15lo725gb/*/*/"
 ```
 
-
+---------------------------------------------------------------------------------------------------------
 
 ### To complete the process, we need to setup the method response.
 
 We use the [put-method-response](https://docs.aws.amazon.com/cli/latest/reference/apigateway/put-method-response.html) command :
 
-# setup the POST method responses (method + integration response)
+### setup the POST method responses (method + integration response)
 
 ```
 aws apigateway put-method-response \
@@ -187,7 +198,7 @@ aws apigateway put-method-response \
     --response-models '{"application/json": "Empty"}'
 ```
 
-# execute
+### execute
 
 ```
 aws apigateway put-method-response \
@@ -209,7 +220,7 @@ aws apigateway put-integration-response \
     --status-code 200 --selection-pattern ''
 ```
 
-# execute
+### execute
 
 
 ```
@@ -220,6 +231,10 @@ aws apigateway put-integration-response \
     --http-method POST \
     --status-code 200 --selection-pattern ''
 ```
+
+![Intregrations](https://github.com/weder96/joinCommunity2023/blob/main/learning/10_ApiGateway/assets/rest-api-id.png)
+
+---------------------------------------------------------------------------------------------------------
 
 ### Deploy the API
 
@@ -228,7 +243,7 @@ aws apigateway put-integration-response \
 
 We use the [create-deployment](https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-deployment.html) command :
 
-# publish the API, create the `dev` stage
+### publish the API, create the `dev` stage
 
 ```
 aws apigateway create-deployment \
@@ -237,26 +252,27 @@ aws apigateway create-deployment \
     --stage-name dev
 ```
 
+![Stage](https://github.com/weder96/joinCommunity2023/blob/main/learning/10_ApiGateway/assets/stage_url.png)
 
-# it works !
+### it works !
 ```
 curl --request POST https://t15lo725gb.execute-api.us-east-1.amazonaws.com/dev
 ```
 
-
+---------------------------------------------------------------------------------------------------------
 
 ### If we want to clear everything we have created, we have to use these commands :
 
 [delete-rest-api](https://docs.aws.amazon.com/cli/latest/reference/apigateway/delete-rest-api.html)
 
-# delete the API Gateway 
+### delete the API Gateway 
 ```
 aws apigateway delete-rest-api \
     --region $AWS_REGION \
     --rest-api-id $API_GATEWAY_ID
 ```
 
-# Excute
+### Excute
 ```
 aws apigateway delete-rest-api \
     --region us-east-1 \
@@ -264,11 +280,11 @@ aws apigateway delete-rest-api \
     
 ```
 
-
+---------------------------------------------------------------------------------------------------------
 
 [delete-function](https://docs.aws.amazon.com/cli/latest/reference/lambda/delete-function.html)
 
-# delete the Lambda
+### delete the Lambda
 
 ```
 aws lambda delete-function \
@@ -277,7 +293,7 @@ aws lambda delete-function \
 ```
 
 
-# Execute
+### Execute
 
 ```
 aws lambda delete-function \
@@ -285,10 +301,11 @@ aws lambda delete-function \
     --function-name apiGwLambda
 ```
 
+---------------------------------------------------------------------------------------------------------
 
 [detach-role-policy](https://docs.aws.amazon.com/cli/latest/reference/iam/detach-role-policy.html)
 
-# to delete the role, you must detach policy first
+### to delete the role, you must detach policy first
 
 ```
 aws iam detach-role-policy \
@@ -296,7 +313,7 @@ aws iam detach-role-policy \
     --policy-arn $LAMBDA_POLICY_ARN
 ```
 
-# Execute
+### Execute
 
 
 ```
@@ -305,22 +322,24 @@ aws iam detach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
 ```
 
+---------------------------------------------------------------------------------------------------------
 
 [delete-role](https://docs.aws.amazon.com/cli/latest/reference/iam/delete-role.html)
-# delete the role
+### delete the role
 
 ```
 aws iam delete-role \
     --role-name $LAMBDA_ROLE_NAME
 ```
 
-# Execute
+### Execute
 
 ```
 aws iam delete-role \
     --role-name apigw-lambda-role-py 
 ```
 
+---------------------------------------------------------------------------------------------------------
 ### Resources
 
 https://docs.aws.amazon.com/pt_br/apigateway/latest/developerguide/create-regional-api.html
