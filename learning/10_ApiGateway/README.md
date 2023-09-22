@@ -105,6 +105,8 @@ aws apigateway create-resource \
     --path-part $API_GATEWAY_RESOURCE_NAME
 ```
 
+![rest-api-id](https://github.com/weder96/joinCommunity2023/blob/main/learning/10_ApiGateway/assets/rest-api-id.png)
+
 ```
 aws apigateway create-resource \
     --region us-east-1 \
@@ -232,8 +234,6 @@ aws apigateway put-integration-response \
     --status-code 200 --selection-pattern ''
 ```
 
-![Intregrations](https://github.com/weder96/joinCommunity2023/blob/main/learning/10_ApiGateway/assets/rest-api-id.png)
-
 ---------------------------------------------------------------------------------------------------------
 
 ### Deploy the API
@@ -258,6 +258,8 @@ aws apigateway create-deployment \
 ```
 curl --request POST https://t15lo725gb.execute-api.us-east-1.amazonaws.com/dev
 ```
+
+![it works](https://github.com/weder96/joinCommunity2023/blob/main/learning/10_ApiGateway/assets/callUrl.png)
 
 ---------------------------------------------------------------------------------------------------------
 
