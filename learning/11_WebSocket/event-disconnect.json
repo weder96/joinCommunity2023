@@ -1,0 +1,43 @@
+{
+    "headers": {
+        "Host": "noup2fd804.execute-api.us-east-1.amazonaws.com",
+        "x-api-key": "",
+        "X-Forwarded-For": "",
+        "x-restapi": ""
+    },
+    "multiValueHeaders": {
+        "Host": [
+            "noup2fd804.execute-api.us-east-1.amazonaws.com"
+        ],
+        "x-api-key": [
+            ""
+        ],
+        "X-Forwarded-For": [
+            ""
+        ],
+        "x-restapi": [
+            ""
+        ]
+    },
+    "requestContext": {
+        "routeKey": "$disconnect",
+        "disconnectStatusCode": 1005,
+        "eventType": "DISCONNECT",
+        "extendedRequestId": "Jul9wHo5IAMFTgQ=",
+        "requestTime": "16/Aug/2023:00:49:40 +0000",
+        "messageDirection": "IN",
+        "disconnectReason": "Client-side close frame status not set",
+        "stage": "production",
+        "connectedAt": 1692146807500,
+        "requestTimeEpoch": 1692146980586,
+        "identity": {
+            "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+            "sourceIp": "128.201.254.247"
+        },
+        "requestId": "Jul9wHo5IAMFTgQ=",
+        "domainName": "noup2fd804.execute-api.us-east-1.amazonaws.com",
+        "connectionId": "JuliudVroAMCFpQ=",
+        "apiId": "noup2fd804"
+    },
+    "isBase64Encoded": false
+}

@@ -1,0 +1,39 @@
+{
+    "version": "2.0",
+    "routeKey": "POST /product",
+    "rawPath": "/product",
+    "rawQueryString": "",
+    "headers": {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br",
+        "content-length": "45",
+        "content-type": "application/json",
+        "host": "oaa91gzrjk.execute-api.us-east-1.amazonaws.com",
+        "postman-token": "e22bdc30-9f76-438a-8e0b-cc5586bf5356",
+        "user-agent": "PostmanRuntime/7.28.1",
+        "x-amzn-trace-id": "Root=1-6490b9a2-10e4bc830529aee242a24e68",
+        "x-forwarded-for": "128.201.253.223",
+        "x-forwarded-port": "443",
+        "x-forwarded-proto": "https"
+    },
+    "requestContext": {
+        "accountId": "710304818543",
+        "apiId": "oaa91gzrjk",
+        "domainName": "oaa91gzrjk.execute-api.us-east-1.amazonaws.com",
+        "domainPrefix": "oaa91gzrjk",
+        "http": {
+            "method": "POST",
+            "path": "/product",
+            "protocol": "HTTP/1.1",
+            "sourceIp": "128.201.253.223",
+            "userAgent": "PostmanRuntime/7.28.1"
+        },
+        "requestId": "GyHxbgLFIAMETDw=",
+        "routeKey": "POST /product",
+        "stage": "$default",
+        "time": "19/Jun/2023:20:25:06 +0000",
+        "timeEpoch": 1687206306475
+    },
+    "body": "{\n    \"name\" : \"Mouse\",\n    \"price\": 230.45\n}",
+    "isBase64Encoded": false
+}

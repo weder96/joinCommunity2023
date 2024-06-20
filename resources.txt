@@ -1,0 +1,55 @@
+https://aws.amazon.com/pt/step-functions/
+
+https://catalog.workshops.aws/stepfunctions/en-US/introduction
+
+
+
+## Course Serverless
+
+https://github.com/awsrun/aws-serverless
+https://medium.com/aws-lambda-serverless-developer-guide-with-hands/aws-lambda-function-development-with-other-aws-serverless-services-in-real-world-hands-on-labs-869a1576a701
+
+
+
+
+### AWS CLI Commands Reference Doc for AWS Lambda:
+
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/list-functions.html
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/index.html
+https://docs.aws.amazon.com/lambda/latest/dg/urls-invocation.html
+
+
+### Python Lambda
+
+https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html
+https://docs.aws.amazon.com/pt_br/xray/latest/devguide/xray-sdk-python.html
+https://github.com/aws/aws-xray-sdk-python
+https://docs.aws.amazon.com/lambda/latest/dg/python-context.html
+
+
+### Resources
+
+https://www.freecodecamp.org/news/aws-cdk-v2-three-tier-serverless-application/
+https://aws.amazon.com/serverless/?nc1=h_ls
+https://k21academy.com/amazon-web-services/aws-serverless-application-model/
+https://github.com/aws-samples/lambda-refarch-fileprocessing
+https://aws.amazon.com/blogs/architecture/category/serverless/
+https://aws.amazon.com/blogs/architecture/lets-architect-serverless-architecture-on-aws/
+https://medium.com/innomizetech/serverless-fundamentals-and-how-to-build-test-and-deploy-lambda-function-to-aws-3f0900d75752
+https://medium.com/@fidelissauro/13-coisas-que-aprendi-em-1-ano-usando-serverless-em-produ%C3%A7%C3%A3o-40e4e5e50470
+https://serverlessland.com/
+https://s12d.com/lambda-fundamentals
+https://medium.com/aws-in-plain-english/deploy-react-web-app-on-aws-s3-and-cloudfront-using-cloudformation-via-aws-sam-cli-409aa479063d
+https://github.com/aws-samples/aws-serverless-airline-booking
+https://catalog.us-east-1.prod.workshops.aws/workshops/026f84fd-f589-4a59-a4d1-81dc543fcd30/en-US
+https://aws.amazon.com/pt/blogs/security/how-to-create-an-aws-iam-policy-to-grant-aws-lambda-access-to-an-amazon-dynamodb-table/
+
+
+
+
+## Project GPS Bus Tracking
+https://aws.amazon.com/blogs/publicsector/creating-a-serverless-gps-monitoring-and-alerting-solution/
+https://aws.amazon.com/blogs/architecture/field-notes-fleet-tracking-using-amazon-location-service-with-aws-iot/
+https://aws.amazon.com/blogs/architecture/mistakes-to-avoid-when-implementing-serverless-architecture-with-lambda/
+https://aws.amazon.com/blogs/compute/icymi-serverless-preinvent-2022/
+

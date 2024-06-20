@@ -1,0 +1,23 @@
+{
+    "requestContext": {
+        "routeKey": "sendMessage",
+        "messageId": "Jupmtf5QIAMCLeQ=",
+        "eventType": "MESSAGE",
+        "extendedRequestId": "JupmtFJvIAMFsWA=",
+        "requestTime": "16/Aug/2023:01:14:31 +0000",
+        "messageDirection": "IN",
+        "stage": "production",
+        "connectedAt": 1692148462606,
+        "requestTimeEpoch": 1692148471435,
+        "identity": {
+            "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+            "sourceIp": "128.201.254.247"
+        },
+        "requestId": "JupmtFJvIAMFsWA=",
+        "domainName": "noup2fd804.execute-api.us-east-1.amazonaws.com",
+        "connectionId": "JuplVf11IAMCLeQ=",
+        "apiId": "noup2fd804"
+    },
+    "body": "{ \"action\": \"sendMessage\", \"message\": \"Hello World  WebSocket!!!!\" }",
+    "isBase64Encoded": false
+}

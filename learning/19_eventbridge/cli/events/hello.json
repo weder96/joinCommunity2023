@@ -1,0 +1,9 @@
+{
+    "id": "1",
+    "time": "2019-08-29T01:11:30Z",
+    "source": "myapp.wsousa.com",
+    "detail-type": "message",
+    "detail": "{\"message\": \"Hello, World!\"}",
+    "account": "12345",
+    "region": "us-east-1"
+}
